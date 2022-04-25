@@ -3,17 +3,20 @@
   --greyish-blue: hsl(240, 18%, 77%);
 }
 
+.App {
+  overflow-x: hidden;
+}
 .container {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
 }
 .quote {
-  padding: 100px;
   font-family: "Inter";
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 100px 0;
 }
 
 .quote--bg-pic {
@@ -43,7 +46,9 @@
 .picture {
   position: relative;
 }
-
+.picture .bg-picture svg {
+  width: 100%;
+}
 .button {
   position: absolute;
   bottom: -15px;
@@ -71,11 +76,16 @@
 .bg-picture {
   position: absolute;
   z-index: -1;
+  top: -100px;
+  left: -100px;
 }
 
 .picture img {
   height: 450px;
   width: auto;
+  /* position: absolute;
+  top: 15%;
+  left: 32% */
 }
 
 @media screen and (min-width: 415px) {
