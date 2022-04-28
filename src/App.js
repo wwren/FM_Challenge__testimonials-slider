@@ -20,13 +20,13 @@ function App() {
     }
   };
   return (
-    <div className="App">
+    <main className="App">
       <div className="container">
         <div className="quote">
           <div className="quote--bg-pic">
             <PatternQuotes />
           </div>
-          <p className="quote--text">{data[currIdx].quote}</p>
+          <h1 className="quote--text">{data[currIdx].quote}</h1>
           <div className="author">
             <p className="quote--author">{data[currIdx].author}</p>
             <p className="quote--role">{data[currIdx].role}</p>
@@ -36,12 +36,12 @@ function App() {
           <div className="bg-picture">
             <PatternBg />
           </div>
-          <img src={require(`${data[currIdx].image}`)}></img>
+          <img src={require(`${data[currIdx].image}`)} alt="profile image"></img>
           <div className="button">
-            <button className="left-btn" onClick={clickPrev}>
+            <button className="left-btn" onClick={clickPrev} aria-label="Prev">
               <Prev />
             </button>
-            <button className="right-btn" onClick={clickNext}>
+            <button className="right-btn" onClick={clickNext} aria-label="Next">
               <Next />
             </button>
           </div>
@@ -50,7 +50,7 @@ function App() {
       <div className="curve">
         <PatternCurve />
       </div>
-    </div>
+    </main>
   );
 }
 
